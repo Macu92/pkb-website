@@ -137,7 +137,7 @@ video {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -179,27 +179,17 @@ video {
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
-.btn-circle:hover,
-.btn-circle:focus {
+.btn-circle:hover {
   outline: none;
   color: white;
   background: rgba(255, 255, 255, 0.1);
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
 }
-.btn-circle i.animated {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-}
-.btn-circle:hover i.animated {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+.btn-circle:focus {
+  color: white;
 }
 @-webkit-keyframes pulse {
   0% {
@@ -230,16 +220,18 @@ video {
   }
 }
 .content-section {
-  background-color: #000000;
-  padding-top: 100px;
   width: 100vw;
+  height: 100vh;
+  border-bottom: solid 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.content-bg {
+  background-color: #000000;
 }
 .download-section {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: transparent;
-  background-color: transparent;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -303,6 +295,7 @@ ul.banner-social-buttons {
 }
 footer {
   padding: 50px 0;
+  background-color: #000000;
 }
 footer p {
   margin: 0;
